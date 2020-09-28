@@ -1,0 +1,46 @@
+<div class="calendar__wrapper">
+<!--  <div class="calendar__input-wrapper" (click)="show = !show">-->
+<!--    <input readonly class="calendar__input" [(ngModel)]="selectedDate">-->
+<!--  </div>-->
+  <div class="calendar" #calendar>
+    <div class="calendar__navs">
+      <div class="calendar__month-nav">
+        <button class="calendar__nav-btn" (click)="prevMonth()">&lt;</button>
+        <span>{{currentDate.format(monthsFormat).toUpperCase()}}  {{currentDate.format(yearsFormat)}}</span>
+        <button class="calendar__nav-btn" [disabled]="!isDisabledMonth(currentDate)" (click)="nextMonth()">&gt;</button>
+      </div>
+    </div>
+    <div class="calendar__month">
+      <div class="calendar__weeks">
+        <div class="calendar__week" *ngFor="let week of weeks">
+          <ng-container *ngFor="let day of week">
+            <div class="calendar__date"
+                 [ngClass]="{'today': day.today, 'selected': day.selected, 'disabled': !isSelectedMonth(day.mDate)}"
+                 (click)="selectDate(day); openModal('custom-modal-1', day.mDate)">
+              <span class="calendar__number">{{day.mDate.date()}}</span>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+      <div class="calendar__day-names">
+        <div class="calendar__day-name"
+             *ngFor="let name of namesOfDays"
+        >{{name}}</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-form-modal id="custom-modal-1">
+  <div class="d-flex">
+    <div>
+      <label for="currentMonth">Month</label>
+      <input id="currentMonth" type="text" [(ngModel)]="currentMonth">
+    </div>
+    <div>
+      <label for="currentDate">Date</label>
+      <input id="currentDate" type="text" [(ngModel)]="selectedDate">
+    </div>
+  </div>
+  <button class="close" (click)="closeModal('custom-modal-1');">&times;</button>
+</app-form-modal>

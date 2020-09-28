@@ -1,0 +1,29 @@
+@import "../../../variables";
+
+.block-text {
+  max-width: 1336px;
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+  color: $nav-links-color;
+  h1 {
+    font: normal normal bold 34px/100px Rubik;
+    letter-spacing: -0.68px;
+  }
+  p {
+    font: normal normal 300 20px/36px Rubik;
+    letter-spacing: 0.4px;
+    text-overflow: ellipsis;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .block-text {
+    max-width: 1170px;
+    p {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}

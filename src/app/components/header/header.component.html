@@ -1,0 +1,12 @@
+<div class="navigation-wrap">
+  <nav class="navbar navbar-light">
+    <a class="navbar-brand" routerLink="/">
+      <img src="../../../assets/images/logoPng.png" alt="WeRdevs">
+    </a>
+
+    <div class="navbar-nav flex-row">
+      <a class="nav-item link" [routerLink]="['/']" [ngClass]="{'is-active': isActive() === '/'}">Home</a>
+      <a class="nav-item link" [routerLink]="['/about']" [ngClass]="{'is-active': isActive() === '/about'}">About Us</a>
+    </div>
+  </nav>
+</div>

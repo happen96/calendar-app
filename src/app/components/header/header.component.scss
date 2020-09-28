@@ -1,0 +1,40 @@
+@import "../../../_variables";
+
+
+.navigation-wrap {
+  padding: 50px 33px;
+  .navbar {
+    padding: 0;
+  }
+}
+
+.navbar-brand {
+  img {
+    width: 165px;
+  }
+}
+.link {
+  text-align: left;
+  font: normal normal medium 28px/30px Rubic;
+  letter-spacing: 0.56px;
+  color:  $nav-links-color;
+  text-transform: uppercase;
+  margin-left: 70px;
+  position: relative;
+  &.is-active:after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: $hover-color;
+    position: absolute;
+    bottom: -12px;
+    right: 42%;
+  }
+}
+
+@media (max-width: 1400px) {
+  .navigation-wrap {
+    padding: 25px 33px;
+  }
+}
