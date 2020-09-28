@@ -41,3 +41,11 @@ a:hover {
   overflow-x: hidden;
   overflow-y: hidden;
 }
+
+@media (max-width: 768px) {
+  body {
+    &::-webkit-scrollbar {
+      display: block;
+    }
+  }
+}

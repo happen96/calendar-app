@@ -38,3 +38,21 @@
     padding: 25px 33px;
   }
 }
+
+@media (max-width: 768px) {
+  .navigation-wrap {
+    padding: 10px 20px;
+  }
+  .link {
+    font-size: 13px;
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar-brand img {
+    width: 90px;
+  }
+}
+
+

@@ -5,7 +5,7 @@
   padding: 2px 0 0;
   width: 100%;
   max-width: 468px;
-  margin: 10% auto;
+  margin: 38% auto;
   border-radius: 4px;
   z-index: 20;
   &__wrapper {
@@ -169,5 +169,51 @@
     font: normal normal medium 16px/19px Rubik;
     letter-spacing: 0;
     color: $text-color;
+  }
+}
+
+
+@media (max-width: 1445px) {
+  .calendar {
+    margin: 24% auto;
+  }
+}
+@media (max-width: 1025px) {
+  .calendar {
+    margin: 40% auto;
+  }
+  .calendar__date, .calendar__day-name[_ngcontent-nha-c41] {
+    height: 30px;
+  }
+  .calendar__date {
+    width: 30px;
+    margin: 5px;
+    &:after {
+      height: 30px;
+      width: 30px;
+    }
+  }
+  .calendar__month-nav, .calendar__day-names {
+    justify-content: center;
+    padding: 0;
+  }
+  .calendar__day-name {
+    font-size: 12px;
+    padding: 10px 0;
+    width: 40px;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .calendar {
+    margin: 35px auto;
+    height: 100vh;
+  }
+}
+
+@media (max-width: 350px) {
+  .calendar {
+    margin: 17px auto;
   }
 }
